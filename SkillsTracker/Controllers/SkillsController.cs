@@ -57,11 +57,11 @@ namespace SkillsTracker.Controllers
         [Route("/skills/form/")]
         public IActionResult ReportOut(DateTime date, string CSharp, string JavaScript, string CSS)
         {
-            string html3 = "<h1>" + date.ToShortDateString() + "</h1>" +
+            string html3 = "<h1>" + date.ToString("yyyy-MM-dd") + "</h1>" +
                     "<ol>" +
-                    "<li>C# is " + CSharp + "</li>" +
-                    "<li>JavaScript is " + JavaScript + "</li>" +
-                    "<li>CSS is " + CSS + "</li>" +
+                    "<li>C#: " + CSharp + "</li>" +
+                    "<li>JavaScript: " + JavaScript + "</li>" +
+                    "<li>CSS: " + CSS + "</li>" +
                     "</ol>";
             return Content(html3, "text/html");
         }
